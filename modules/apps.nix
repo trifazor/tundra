@@ -9,10 +9,10 @@ let
 in
 {
   options.tundra.apps = {
-    development.enable = lib.mkEnableOption "development apps from purrfact";
-    creative.enable = lib.mkEnableOption "creative apps from purrfact";
-    productivity.enable = lib.mkEnableOption "productivity apps from purrfact";
-    communication.enable = lib.mkEnableOption "communication apps from purrfact";
+    development.enable = lib.mkEnableOption "development apps";
+    creative.enable = lib.mkEnableOption "creative apps";
+    productivity.enable = lib.mkEnableOption "productivity apps";
+    communication.enable = lib.mkEnableOption "communication apps";
     browser.enable = lib.mkEnableOption "Firefox";
     extraPackages = lib.mkOption {
       type = lib.types.listOf lib.types.package;

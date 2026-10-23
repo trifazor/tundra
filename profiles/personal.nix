@@ -1,4 +1,4 @@
-# Optional selection drawn from ~/purrfact. Import alongside the Tundra module.
+# Optional app selection. Import alongside the Tundra module.
 { pkgs, ... }:
 {
   tundra.apps = {
