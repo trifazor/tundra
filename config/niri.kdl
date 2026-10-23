@@ -1,0 +1,36 @@
+// System defaults; users can override with ~/.config/niri/config.kdl.
+input {
+    keyboard { xkb { layout "us"; }; };
+    touchpad { tap; natural-scroll; };
+}
+layout {
+    gaps 8
+    default-column-width { proportion 0.5; }
+    focus-ring { width 2; active-color "#88c0d0"; }
+}
+prefer-no-csd
+hotkey-overlay { skip-at-startup; }
+binds {
+    Mod+Return { spawn "foot"; }
+    Mod+Space { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+    Mod+E { spawn "dfiles"; }
+    Mod+C { spawn "dcal"; }
+    Mod+L { spawn "dms" "ipc" "call" "lock" "lock"; }
+    Mod+Q { close-window; }
+    Mod+Left { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up { focus-window-up; }
+    Mod+Down { focus-window-down; }
+    Mod+Shift+Left { move-column-left; }
+    Mod+Shift+Right { move-column-right; }
+    Mod+Shift+Up { move-window-up; }
+    Mod+Shift+Down { move-window-down; }
+    Mod+Page_Down { focus-workspace-down; }
+    Mod+Page_Up { focus-workspace-up; }
+    Mod+Shift+Page_Down { move-column-to-workspace-down; }
+    Mod+Shift+Page_Up { move-column-to-workspace-up; }
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+O { toggle-overview; }
+    Mod+Shift+E { quit; }
+}

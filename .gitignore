@@ -1,0 +1,36 @@
+# Nix build outputs and local development environments.
+/result
+/result-*
+/.direnv/
+
+# VM disks, saved state, and local test output.
+*.qcow2
+*.qcow2.lock
+*.raw
+*.vdi
+/vm-state-*/
+/test-output/
+*.log
+
+# Local physical-machine imports: review before explicitly staging with -f.
+/hosts/test-machine/existing/
+
+# Credentials and local environment variables. Encrypted secrets may be tracked.
+.env
+.env.*
+!.env.example
+/secrets/
+*.pem
+*.key
+id_ed25519
+id_rsa
+
+# Editor and OS temporary files.
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Keep flake.lock tracked for reproducible dependency versions.
