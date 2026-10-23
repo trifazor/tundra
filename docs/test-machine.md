@@ -1,7 +1,7 @@
 # Physical test machine
 
 The `tundra-test` flake configuration adds Tundra to an existing x86_64 NixOS
-machine. It retains Plasma as a fallback session, uses Dux Greeter instead of
+machine. It does not add Plasma, uses Dux Greeter instead of
 SDDM, and disables automatic login. It creates no users and supplies no password.
 The checked-in placeholder deliberately prevents building until you supply the
 actual machine configuration.
@@ -80,8 +80,8 @@ sudo nixos-rebuild boot --flake .#tundra-test
 
 Reboot and select the new generation. In Dux Greeter, select your existing user
 and the Niri session. Your existing password remains in use; the VM's
-`tundra`/`tundra` credentials do not apply. Plasma remains available in the
-session selector. Do not delete older generations or run garbage collection
+`tundra`/`tundra` credentials do not apply.
+Do not delete older generations or run garbage collection
 until the machine has passed validation.
 
 ## Validate and recover
@@ -91,9 +91,9 @@ present, locking/unlocking, logout, reboot, suspend/resume, and external display
 if used. Note whether slow startup occurs only on the first login or every time.
 GPU-specific problems may require adjustments to the existing machine settings.
 
-If Niri fails but the greeter works, choose Plasma. If the greeter or boot fails,
+If Niri or the greeter fails,
 reboot and select the previously working NixOS generation from the boot menu.
 Keep the original `/etc/nixos` backup so the original configuration can be rebuilt.
 
-After reliable hardware testing, Plasma can be removed from this machine profile.
+Tundra does not install Plasma; remove it from your imported configuration if you want it gone.
 No physical-machine activation has been performed by the development workflow.

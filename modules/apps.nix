@@ -21,7 +21,7 @@ in
     };
   };
   config = {
-    programs.firefox.enable = cfg.browser.enable;
+    programs.firefox.enable = lib.mkIf cfg.browser.enable true;
     environment.systemPackages =
       cfg.extraPackages
       ++ lib.optionals cfg.development.enable (

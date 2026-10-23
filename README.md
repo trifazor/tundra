@@ -9,9 +9,9 @@ is in progress.
 ## Install
 
 Start with a working NixOS installation. For a fresh machine, install NixOS
-with KDE Plasma first using the [official installation guide](https://nixos.org/manual/nixos/stable/#sec-installation),
-create your user, and boot into it. Tundra preserves that configuration and keeps
-Plasma as a fallback. It currently ships as a configuration, without an installer ISO.
+first using the [official installation guide](https://nixos.org/manual/nixos/stable/#sec-installation),
+create your user, and boot into it. Tundra reuses that configuration and adds no KDE fallback; the previous
+NixOS generation is your fallback. It currently ships as a configuration, without an installer ISO.
 
 Run these steps **on the machine where you want to install Tundra**. The pinned
 Nixpkgs unstable version may upgrade your system beyond its current release.
@@ -63,7 +63,7 @@ Nixpkgs unstable version may upgrade your system beyond its current release.
    ```
 
 5. Reboot into the new generation. Select **Niri** in Dux Greeter and log in with
-   your existing account and password. Plasma remains available in the session menu.
+   your existing account and password.
 
 If boot or login fails, select the previous NixOS generation from the boot menu.
 Keep that generation until testing is complete. For future updates, rebuild from
